@@ -88,11 +88,17 @@ function showCardPreview(card, url) {
     cardpreview.id = "cardpreview";
     cardpreview.width = "250";
     cardpreview.addEventListener("mouseout", hideCardPreview);
+    cardpreview.addEventListener("mousemove", function(e) {
+      if (e.y > parseInt(cardpreview.dataset.hideoffset) + 28) {
+        hideCardPreview();
+      }
+    });
     document.body.appendChild(cardpreview);
   }
   var bcr = card.getBoundingClientRect();
   cardpreview.style.top = bcr.top + document.body.scrollTop;
   cardpreview.style.left = bcr.left + document.body.scrollLeft;
+  cardpreview.dataset.hideoffset = bcr.top;
   cardpreview.src = url;
   cardpreview.style.display = "block";
 }
