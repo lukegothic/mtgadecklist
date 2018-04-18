@@ -72,7 +72,6 @@ function parseDecklist(node) {
         }
       }
       if (allReqFinished) {
-        console.log(decklist, node);
         showDecklist(decklist, node);
       }
     });
@@ -88,11 +87,17 @@ function showCardPreview(card, url) {
     cardpreview.id = "cardpreview";
     cardpreview.width = "250";
     cardpreview.addEventListener("mouseout", hideCardPreview);
+    cardpreview.addEventListener("mousemove", function(e) {
+      if (e.y > parseInt(cardpreview.dataset.hideoffset) + 28) {
+        hideCardPreview();
+      }
+    });
     document.body.appendChild(cardpreview);
   }
   var bcr = card.getBoundingClientRect();
   cardpreview.style.top = bcr.top + document.body.scrollTop;
   cardpreview.style.left = bcr.left + document.body.scrollLeft;
+  cardpreview.dataset.hideoffset = bcr.top;
   cardpreview.src = url;
   cardpreview.style.display = "block";
 }
@@ -113,7 +118,6 @@ function showDecklist(deck, node) {
     card = deck.main[c];
     rarities[card.data.rarity] += card.quantity;
     art = card.data.card_faces ? card.data.card_faces[0].image_uris.normal : card.data.image_uris.normal;
-    console.log(art);
     colors = card.data.card_faces ? card.data.card_faces[0].colors : card.data.colors;
     mc = card.data.card_faces ? card.data.card_faces[0].mana_cost : card.data.mana_cost;
     mcsymbols = mc.toLowerCase().replace(/\{/g, "<i class=\"ms ms-cost ms-shadow ms-").replace(/\}/g, "\"></i>");
