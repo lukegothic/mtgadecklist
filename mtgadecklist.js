@@ -122,7 +122,7 @@ function showDecklist(deck, node) {
     colors = card.data.card_faces ? card.data.card_faces[0].colors : card.data.colors;
     mc = card.data.card_faces ? card.data.card_faces[0].mana_cost : card.data.mana_cost;
     mcsymbols = mc.toLowerCase().replace(/\{/g, "<i class=\"ms ms-cost ms-shadow ms-").replace(/\}/g, "\"></i>");
-    html += template.format(art, art, getBorderColor(colors), card.data.rarity, card.quantity, card.name, mcsymbols);
+    html += template.format(art, art, getBorderColor(colors), card.data.rarity, card.quantity, card.name, mcsymbols); 
   }
   var deckfooter = "<div class=\"footer\">";
   for (var r in rarities) {
