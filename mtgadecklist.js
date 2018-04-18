@@ -16,11 +16,7 @@ var mtgcolorToHEX = {
     "O": "#777777"
 };
 function getBorderColor(colors) {
-<<<<<<< HEAD
-  switch (colors.length) {
-=======
   switch(colors.length) {
->>>>>>> f81290aebeef6b842c169bb4931d0c567a603dd5
     case 0: return mtgcolorToHEX["O"];
     case 1: return mtgcolorToHEX[colors[0]];
     default: return mtgcolorToHEX["M"];
@@ -76,6 +72,7 @@ function parseDecklist(node) {
         }
       }
       if (allReqFinished) {
+        console.log(decklist, node);
         showDecklist(decklist, node);
       }
     });
