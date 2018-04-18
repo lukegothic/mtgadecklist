@@ -24,25 +24,24 @@ function getBorderColor(colors) {
   return mtgcolorToHEX["O"];
 }
 function parseDecklist(node) {
-  var reCard = /x?(\d+)x?.?(.*?).?\((.*?)\).?(\d+)/;
+  var reCard = /x?(\d+)x?.?(.*?).?\((.*?)\).?(\d+)/g;
   var decklist = {
     main: [],
     side: []
   };
-  var cards = node.innerHTML.split("\n");
-  var card;
-  for (var c = 0; c < cards.length; c++) {
-    card = cards[c];
-    card = reCard.exec(card);
-    if (card !== null) {
-      decklist.main.push({
-        "quantity": parseInt(card[1]),
-        "name": card[2].trim(),
-        "set": card[3].toLowerCase(),
-        "collector_number": parseInt(card[4])
-      });
+  do {
+    card = reCard.exec(node.innerHTML);
+    if (card) {
+      if (card !== null) {
+        decklist.main.push({
+          "quantity": parseInt(card[1]),
+          "name": card[2].trim(),
+          "set": card[3].toLowerCase(),
+          "collector_number": parseInt(card[4])
+        });
+      }
     }
-  }
+  } while (card);
   var scryfallQ = [];
   for (var c = 0; c < decklist.main.length; c++) {
     card = decklist.main[c];
