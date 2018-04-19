@@ -22,13 +22,15 @@ Not-even-alpha
   <li>Deck header with deck name, colors and total cards</li>
   <li>Get decklist from remote source (mtggoldfish,tappedout...etc.)</li>
   <li>Better sorting (should sort each group by card type, cmc, color, name)</li>
-  <li>Export to MTGA button</li>
+  <li>Button to export decklist to MTGA</li>
+  <li>Sideboard cards</li>
   <li>Settings
     <ul>
-      <li>Show header(yes|no)</li>
-      <li>Show footer(yes|no)</li>
+      <li>Show header (yes|no)</li>
+      <li>Show footer (yes|no)</li>
       <li>Theme (light|dark|custom)</li>
-      <li>Show cards as images(yes|no)</li>
+      <li>Show cards as images (yes|no)</li>
+      <li>Layout (single|multiple columns)</li>
       <li>Card grouping (ungrouped|light grouping (Creatures, Spells, Lands)|full (All card types))</li>
       <li>Position of the card preview (inside|aside|none)</li>
     </ul>
