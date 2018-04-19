@@ -2,7 +2,7 @@
 Javascript plugin that automatically converts a MTGA decklist into a fancier version of it.
 
 <h2>Version</h2>
-Not-even-alpha
+Prototype 1
 
 <h2>Demo</h2>
 <a href="https://lukegothic.github.io/mtgadecklist/">Demo</a>
@@ -24,12 +24,13 @@ Not-even-alpha
   <li>Better sorting (should sort each group by card type, cmc, color, name)</li>
   <li>Button to export decklist to MTGA</li>
   <li>Sideboard cards</li>
+  <li>Nice face in/out effect on showing the card preview</li>
   <li>Settings
     <ul>
       <li>Show header (yes|no)</li>
       <li>Show footer (yes|no)</li>
       <li>Theme (light|dark|custom)</li>
-      <li>Show cards as images (yes|no)</li>
+      <li>Cards as images (yes|no)</li>
       <li>Layout (single|multiple columns)</li>
       <li>Card grouping (ungrouped|light grouping (Creatures, Spells, Lands)|full (All card types))</li>
       <li>Position of the card preview (inside|aside|none)</li>

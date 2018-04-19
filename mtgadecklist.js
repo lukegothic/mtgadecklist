@@ -125,7 +125,27 @@ function typeinGroup(cardtype, grouptype) {
   }
   return false;
 }
+var defaultSettings = {
+  header: true,
+  footer: true,
+  theme: "dark",
+  hscards: false,
+  layout: "single",
+  groups: "light",
+  preview: "inside"
+};
+function getDecklistSettings(node) {
+  var aSettings = node.dataset.settings.split(";");
+  var settings = {};
+  var setting;
+  for (var s = 0; s < aSettings.length; s++) {
+    setting = aSettings[s].split("=");
+    settings[setting[0]] = setting[1];
+  }
+  return settings;
+}
 function showDecklist(deck, node) {
+  var settings = getDecklistSettings(node);
   // TODO: sort by cmc, color, name
   // TODO: settings
   var html = "";
