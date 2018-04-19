@@ -12,7 +12,7 @@ Not-even-alpha
   <li>Create a div node in your html document</li>
   <li>Add the attribute data-decklist="custom" to the node</li>
   <li>Copy the MTGA decklist inside the node</li>
-  <li>Include a script tag at the end of the html body to use the lib <script src="https://lukegothic.github.io/mtgadecklist/mtgadecklist.js"></script>
+  <li>Include a script tag at the end of the html body to use the lib <pre><script src="https://lukegothic.github.io/mtgadecklist/mtgadecklist.js"></script></pre>
   <li>???</li>
   <li>Magic!</li>
 </ol>
