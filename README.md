@@ -13,3 +13,21 @@ Version: Not-even-alpha
   <li>???</li>
   <li>Magic!</li>
 </ol>
+
+<h2>TO-DO</h2>
+<ul>
+  <li>Deck header with deck name, colors and total cards</li>
+  <li>Get decklist from remote source (mtggoldfish,tappedout...etc.)</li>
+  <li>Better sorting (should sort each group by card type, cmc, color, name)</li>
+  <li>Export to MTGA button</li>
+  <li>Settings
+    <ul>
+      <li>Show header(yes|no)</li>
+      <li>Show footer(yes|no)</li>
+      <li>Theme (light|dark|custom)</li>
+      <li>Show cards as images(yes|no)</li>
+      <li>Card grouping (ungrouped|light grouping (Creatures, Spells, Lands)|full (All card types))</li>
+      <li>Position of the card preview (inside|aside|none)</li>
+    </ul>
+  </li>
+</ul>
