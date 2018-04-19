@@ -1,10 +1,13 @@
 <h1>AutoMagic Arena Decklists</h1>
-Version: Not-even-alpha
+Javascript plugin that automatically converts a MTGA decklist into a fancier version of it.
+
+<h2>Version</h2>
+Not-even-alpha
 
 <h2>Demo</h2>
 <a href="https://lukegothic.github.io/mtgadecklist/">Demo</a>
 
-<h2>How to use: Step by Step</h2>
+<h2>How to use</h2>
 <ol>
   <li>Create a div node in your html document</li>
   <li>Add the attribute data-decklist="custom" to the node</li>
