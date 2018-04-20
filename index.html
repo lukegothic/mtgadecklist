@@ -6,50 +6,43 @@
 </head>
 <body>
   <!-- todo: decks desde website y settings -->
-  <div data-decklist="custom" data-settings="hscards=true">
-    4 Ahn-Crop Crasher (AKH) 117
-    1 Glorybringer (AKH) 134
-    4 Earthshaker Khenra (HOU) 90
-    4 Daring Buccaneer (RIX) 98
-    4 Fanatical Firebrand (RIX) 101
-    4 Goblin Trailblazer (RIX) 105
-    4 Rigging Runner (XLN) 157
-    1 Rekindling Phoenix (RIX) 111
-    3 Hazoret the Fervent (AKH) 136
-    1 Captain Lannery Storm (XLN) 136
-    3 Magma Spray (AKH) 141
-    1 Abrade (HOU) 83
-    4 Lightning Strike (XLN) 149
-    14 Mountain (AKH) 253
-    4 Ramunap Ruins (HOU) 181
-    4 Sunscorched Desert (AKH) 249
+  <div style="width:250px;float:left;">
+    <textarea style="width:100%;height:400px;" id="newDecklistText" placeholder="Paste your decklist here"></textarea>
+    <button id="parseDecklist" style="display:block;width:100%;">Pretty my list!</button>
   </div>
-  <div data-decklist="custom" data-settings="hscards=false">
-    2 Champion of Wits (HOU) 31
-    1 Nezahal, Primal Tide (RIX) 45
-    3 The Scarab God (HOU) 145
-    3 Dusk Legion Zealot (RIX) 70
+  <div id="targetNode" data-decklist="custom" data-settings="hscards=1;groups=normal">
+    2 Carnage Tyrant (XLN) 179
+    2 Thrashing Brontodon (RIX) 148
     2 Ravenous Chupacabra (RIX) 82
-    3 Opt (XLN) 65
-    2 Censor (AKH) 46
-    2 Essence Scatter (AKH) 52
-    2 Search for Azcanta (XLN) 74a
-    2 Supreme Will (HOU) 49
-    2 Hieroglyphic Illumination (AKH) 57
+    4 Ripjaw Raptor (XLN) 203
+    3 Twilight Prophet (RIX) 88
+    1 Prowling Serpopard (AKH) 180
+    2 Treasure Map (XLN) 250a
     3 Moment of Craving (RIX) 79
-    1 Doomfall (HOU) 62
-    1 Golden Demise (RIX) 73
-    2 Negate (RIX) 44
+    2 Walk the Plank (XLN) 130
+    4 Golden Demise (RIX) 73
+    1 Arguel's Blood Fast (XLN) 90a
+    3 Reaver Ambush (RIX) 83
     2 Vraska's Contempt (XLN) 129
-    1 Bontu's Last Reckoning (HOU) 60
-    1 Liliana, Death's Majesty (AKH) 97
-    7 Island (RIX) 193
-    9 Swamp (RIX) 194
-    2 Drowned Catacomb (XLN) 253
-    4 Submerged Boneyard (AKH) 284
+    1 Hour of Glory (HOU) 65
+    2 Vraska, Relic Seeker (XLN) 232
+    7 Forest (RIX) 196
+    10 Swamp (RIX) 194
+    4 Evolving Wilds (RIX) 186
+    4 Foul Orchard (RIX) 188
     1 Arch of Orazca (RIX) 185
-    2 Field of Ruin (XLN) 254
   </div>
   <script src="mtgadecklist.js"></script>
+  <script>
+    var newDecklistText = document.getElementById("newDecklistText");
+    var newDecklistNode = document.getElementById("targetNode");
+    var parseDecklistButton = document.getElementById("parseDecklist");
+    parseDecklistButton.addEventListener("click", function() {
+      newDecklistNode.innerHTML = newDecklistText.value;
+      document.body.appendChild(newDecklistNode);
+      parseDecklist(newDecklistNode);
+      newDecklistText.value = "";
+    });
+  </script>
 </body>
 </html>

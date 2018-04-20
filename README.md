@@ -2,7 +2,7 @@
 Javascript plugin that automatically converts a MTGA decklist into a fancier version of it.
 
 <h2>Version</h2>
-Prototype 1
+Prototype 2
 
 <h2>Demo</h2>
 <a href="https://lukegothic.github.io/mtgadecklist/">Demo</a>
@@ -21,10 +21,9 @@ Prototype 1
 <ul>
   <li>Deck header with deck name, colors and total cards</li>
   <li>Get decklist from remote source (mtggoldfish,tappedout...etc.)</li>
-  <li>Better sorting (should sort each group by card type, cmc, color, name)</li>
   <li>Button to export decklist to MTGA</li>
   <li>Sideboard cards</li>
-  <li>Nice face in/out effect on showing the card preview</li>
+  <li>Nice fade in/out effect on showing the card preview</li>
   <li>Settings
     <ul>
       <li>Show header (yes|no)</li>
