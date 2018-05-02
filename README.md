@@ -19,20 +19,20 @@ Prototype 2
 
 <h2>TO-DO</h2>
 <ul>
-  <li>Deck header with deck name, colors and total cards</li>
-  <li>Get decklist from remote source (mtggoldfish,tappedout...etc.)</li>
   <li>Button to export decklist to MTGA</li>
+  <li>Get decklist from remote source (mtggoldfish,tappedout...etc.)</li>
+  <li>Deck header with deck name, colors and total cards</li>
   <li>Sideboard cards</li>
   <li>Nice fade in/out effect on showing the card preview</li>
   <li>Settings
     <ul>
+      <li>Card grouping (ungrouped|light grouping (Creatures, Spells, Lands)|full (All card types))</li>
+      <li>Cards as images (yes|no)</li>
       <li>Show header (yes|no)</li>
       <li>Show footer (yes|no)</li>
-      <li>Theme (light|dark|custom)</li>
-      <li>Cards as images (yes|no)</li>
-      <li>Layout (single|multiple columns)</li>
-      <li>Card grouping (ungrouped|light grouping (Creatures, Spells, Lands)|full (All card types))</li>
       <li>Position of the card preview (inside|aside|none)</li>
+      <li>Layout (single|multiple columns)</li>
+      <li>Theme (light|dark|custom)</li>
     </ul>
   </li>
 </ul>

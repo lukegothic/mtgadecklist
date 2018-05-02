@@ -237,6 +237,7 @@ function showDecklist(deck, node) {
   var settings = getDecklistSettings(node);
   var groups = cardGroups[settings.groups];
   var html = "";
+  var headtemplate = "<div class=\"deck\"><div class=\"deck-header\"></div></div>";
   var grouptemplate = "<div class=\"card card-group\"><span class=\"quantity\">{0}</span><span class=\"name\">{1}</span><i class=\"mc ms ms-{2}\"></i></div>"
   var cardtemplate = "<div class=\"card\" onmouseover=\"javascript:showCardPreview(this, '{0}')\" style=\"background-image:url('{1}');box-shadow:inset 0 0 0 2px {2};\" /><span class=\"quantity q-{3}\">{4}</span><span class=\"name\">{5}</span><span class=\"mc\">{6}</span></div>";
   var cardcnt, card, art, mc, grouphtml;
